@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
       autoLoadEntities: true,
       synchronize: true
     }),
-    EstadoEnvioModule
+    EstadoEnvioModule,
+    UsuarioModule
 
   ],
   controllers: [],
