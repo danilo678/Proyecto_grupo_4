@@ -35,6 +35,7 @@ CREATE TABLE entrega (
     );
 
 --Cuarta parte de la tabla
+
 CREATE TABLE usuario (
         id SERIAL PRIMARY KEY,
         nombre_usuario VARCHAR(50) UNIQUE NOT NULL,
