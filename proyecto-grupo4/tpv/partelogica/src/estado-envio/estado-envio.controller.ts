@@ -1,4 +1,20 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { EstadoEnvioService } from './estado-envio.service';
+import { EstadoEnvio } from './estado-envio';
 
-@Controller('estado-envio')
-export class EstadoEnvioController {}
+@Controller('api/v1/estado-envio')
+export class EstadoEnvioController {
+
+    constructor(
+
+        private readonly clienteService: EstadoEnvioService
+
+    ) {}
+
+    @Get()
+    async findAll(): Promise<EstadoEnvio[]> {
+
+        return await this.clienteService.findAll();
+        
+    }
+}
