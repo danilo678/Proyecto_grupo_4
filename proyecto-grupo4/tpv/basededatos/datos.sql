@@ -21,3 +21,23 @@ INSERT INTO seguimiento (envio_id, estado_id, ubicacion, observaciones) VALUES
 -- ENTREGA
 INSERT INTO entrega (envio_id, fecha_entrega, nombre_recibe, ci_recibe, firma) VALUES
 (3, NOW(), 'Juan Perez', '123456', 'FirmaDigital');
+
+--Cuarta parte de la tabla
+
+-- USUARIOS
+INSERT INTO usuario (nombre_usuario, password, rol) VALUES
+('admin', '123', 'admin'),
+('operador1', '123', 'operador');
+-- EMPLEADOS
+INSERT INTO empleado (nombre, apellido, cargo, telefono, sucursal_id) VALUES
+('Luis', 'Gomez', 'Cajero', '77788888', 1),
+('Ana', 'Martinez', 'Operador', '77799999', 2);
+-- PAGOS
+INSERT INTO pago (envio_id, monto, metodo) VALUES
+(1, 50, 'Efectivo'),
+(2, 30, 'QR'),
+(3, 70, 'Tarjeta');
+-- FACTURAS
+INSERT INTO factura (pago_id, numero_factura, nit, razon_social) VALUES
+(1, 'F001', '1234567', 'Juan Perez'),
+(3, 'F002', '7654321', 'Carlos Quispe');
