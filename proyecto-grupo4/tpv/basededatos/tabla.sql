@@ -1,42 +1,74 @@
-CREATE TABLE cliente ( 
-    id SERIAL PRIMARY KEY, 
-    nombre VARCHAR(100) NOT NULL, 
-    apellido VARCHAR(100) NOT NULL, 
-    ci VARCHAR(20) UNIQUE, 
-    telefono VARCHAR(20), 
-    email VARCHAR(100), 
-    direccion TEXT, 
-    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
-); 
+CREATE TABLE cliente (
+        id SERIAL PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL,
+        apellido VARCHAR(100) NOT NULL,
+        ci VARCHAR(20) UNIQUE,
+        telefono VARCHAR(20),
+        email VARCHAR(100),
+        direccion TEXT,
+        fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
 
-CREATE TABLE sucursal ( 
-    id SERIAL PRIMARY KEY, 
-    nombre VARCHAR(100) NOT NULL, 
-    direccion TEXT NOT NULL, 
-    ciudad VARCHAR(100), 
-    telefono VARCHAR(20) 
-); 
+CREATE TABLE sucursal (
+        id SERIAL PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL,
+        direccion TEXT NOT NULL,
+        ciudad VARCHAR(100),
+        telefono VARCHAR(20)
+    );
 
-CREATE TABLE contacto_cliente ( 
-    id SERIAL PRIMARY KEY, 
-    cliente_id INT REFERENCES cliente(id), 
-    tipo VARCHAR(50), 
-    nombre VARCHAR(100), 
-    telefono VARCHAR(20) 
-); 
+CREATE TABLE contacto_cliente (
+        id SERIAL PRIMARY KEY,
+        cliente_id INT REFERENCES cliente (id),
+        tipo VARCHAR(50),
+        nombre VARCHAR(100),
+        telefono VARCHAR(20)
+    );
 
-CREATE TABLE cliente_sucursal ( 
-    cliente_id INT REFERENCES cliente(id), 
-    sucursal_id INT REFERENCES sucursal(id), 
-    PRIMARY KEY (cliente_id, sucursal_id) 
-); 
+CREATE TABLE cliente_sucursal (
+        cliente_id INT REFERENCES cliente (id),
+        sucursal_id INT REFERENCES sucursal (id),
+        PRIMARY KEY (cliente_id, sucursal_id)
+    );
+
+--Tabla tercera parte
+CREATE TABLE encomienda (
+        id SERIAL PRIMARY KEY,
+        codigo VARCHAR(50) UNIQUE NOT NULL,
+        remitente_id INT REFERENCES cliente (id),
+        destinatario_id INT REFERENCES cliente (id),
+        descripcion TEXT,
+        peso DECIMAL(10, 2),
+        volumen DECIMAL(10, 2),
+        valor_declarado DECIMAL(10, 2),
+        fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+CREATE TABLE tipo_paquete (
+        id SERIAL PRIMARY KEY,
+        nombre VARCHAR(50),
+        descripcion TEXT
+    );
+
+CREATE TABLE detalle_encomienda (
+        id SERIAL PRIMARY KEY,
+        encomienda_id INT REFERENCES encomienda (id),
+        tipo_id INT REFERENCES tipo_paquete (id),
+        cantidad INT,
+        observaciones TEXT
+    );
+
+CREATE TABLE seguro (
+        id SERIAL PRIMARY KEY,
+        encomienda_id INT UNIQUE REFERENCES encomienda (id),
+        monto DECIMAL(10, 2),
+        descripcion TEXT
+    );
 
 --TABLA DE LA PARTE 4 DE HERNAN 
-
 CREATE TABLE estado_envio (
-    id SERIAL PRIMARY KEY,
-    nombre VARCHAR(50)
-    );
+    id SERIAL PRIMARY KEY, 
+    nombre VARCHAR(50));
 
 CREATE TABLE envio (
         id SERIAL PRIMARY KEY,
@@ -68,7 +100,6 @@ CREATE TABLE entrega (
     );
 
 --Cuarta parte de la tabla
-
 CREATE TABLE usuario (
         id SERIAL PRIMARY KEY,
         nombre_usuario VARCHAR(50) UNIQUE NOT NULL,

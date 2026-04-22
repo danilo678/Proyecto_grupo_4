@@ -21,7 +21,30 @@ INSERT INTO cliente_sucursal (cliente_id, sucursal_id) VALUES
 (2,2), 
 (3,1),(3,3);
 
---PARTE 4 DE HERNAN 
+
+--PArte 2 de Sandra
+-- TIPOS DE PAQUETE
+INSERT INTO tipo_paquete (nombre, descripcion) VALUES
+('Caja', 'Caja de cartón'),
+('Sobre', 'Documentos'),
+('Paquete', 'Paquete general');
+-- ENCOMIENDAS
+INSERT INTO encomienda (codigo, remitente_id, destinatario_id, descripcion, peso, volumen, valor_declarado)
+VALUES
+('ENC001', 1, 2, 'Ropa', 5.5, 0.3, 200),
+('ENC002', 2, 3, 'Documentos', 1.0, 0.1, 50),
+('ENC003', 3, 1, 'Electrónicos', 3.0, 0.2, 500);
+-- DETALLE
+INSERT INTO detalle_encomienda (encomienda_id, tipo_id, cantidad, observaciones) VALUES
+(1, 1, 2, 'Cajas medianas'),
+(2, 2, 5, 'Sobres sellados'),
+(3, 3, 1, 'Equipo delicado');
+-- SEGURO
+INSERT INTO seguro (encomienda_id, monto, descripcion) VALUES
+(1, 20, 'Seguro básico'),
+(3, 50, 'Seguro completo');
+
+--PARTE 3 DE HERNAN 
 -- ESTADOS
 INSERT INTO estado_envio (nombre) VALUES
 ('Registrado'),
