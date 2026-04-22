@@ -9,13 +9,11 @@ export class usuario {
     @Column({ length: 50})
     nombre_usuario: string;  
 
-    @Column({ type: 'string', select: false })
-
     @Column({ type: 'text', nullable: false, select: false }) 
     password: string;
 
     @Column({ length: 50})
-    role: string;
+    rol: string;
 
     @Column({type: 'boolean', default: true})
     estado: boolean;
