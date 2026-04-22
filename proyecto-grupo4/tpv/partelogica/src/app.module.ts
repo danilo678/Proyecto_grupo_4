@@ -4,6 +4,7 @@ import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { SucursalModule } from './sucursal/sucursal.module';
+import { TipopaqueteModule } from './tipopaquete/tipopaquete.module';
 
 
 @Module({
@@ -13,7 +14,7 @@ import { SucursalModule } from './sucursal/sucursal.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '1234',
+      password: 'hola123',
       database: 'tpvdb',
       autoLoadEntities: true,
       synchronize: true
@@ -21,7 +22,8 @@ import { SucursalModule } from './sucursal/sucursal.module';
     EstadoEnvioModule,
     UsuarioModule,
     ClienteModule,
-    SucursalModule
+    SucursalModule,
+    TipopaqueteModule
 
   ],
   controllers: [],
