@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { EstadoEnvioService } from './estadoenvio.service';
 import { EstadoEnvio } from './estadoenvio';
 
-@Controller('api/v1/estado-envio')
+@Controller('api/v1/estadoenvioooofeimf')
 export class EstadoEnvioController {
 
     constructor(

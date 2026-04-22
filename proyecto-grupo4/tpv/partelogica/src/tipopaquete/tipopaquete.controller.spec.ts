@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TipopaqueteController } from './tipopaquete.controller';
+import { tipopaquetecontroller } from './tipopaquete.controller';
 
 describe('TipopaqueteController', () => {
-  let controller: TipopaqueteController;
+  let controller: tipopaquetecontroller;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [TipopaqueteController],
+      controllers: [tipopaquetecontroller],
     }).compile();
 
-    controller = module.get<TipopaqueteController>(TipopaqueteController);
+    controller = module.get<tipopaquetecontroller>(tipopaquetecontroller);
   });
 
   it('should be defined', () => {
