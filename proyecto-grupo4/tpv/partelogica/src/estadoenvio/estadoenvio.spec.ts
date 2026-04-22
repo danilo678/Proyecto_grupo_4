@@ -1,4 +1,4 @@
-import { EstadoEnvio } from './estado-envio';
+import { EstadoEnvio } from './estadoenvio';
 
 describe('EstadoEnvio', () => {
   it('should be defined', () => {

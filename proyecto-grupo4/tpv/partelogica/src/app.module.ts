@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
+import { EstadoEnvioModule } from './estadoenvio/estadoenvio.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { SucursalModule } from './sucursal/sucursal.module';

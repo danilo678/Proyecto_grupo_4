@@ -1,5 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { TipopaqueteService } from './tipopaquete.service';
+import { Tipopaquete } from './tipopaquete';
+
 
 @Controller('api/v1/tipopaquete')
 export class TipopaqueteController {

@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EstadoEnvioController } from './estado-envio.controller';
+import { EstadoEnvioController } from './estadoenvio.controller';
 
 describe('EstadoEnvioController', () => {
   let controller: EstadoEnvioController;

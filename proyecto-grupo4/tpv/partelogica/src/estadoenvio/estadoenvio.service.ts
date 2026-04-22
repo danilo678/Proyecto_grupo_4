@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { EstadoEnvio } from './estado-envio';
+import { EstadoEnvio } from './estadoenvio';
 
 @Injectable()
 export class EstadoEnvioService {

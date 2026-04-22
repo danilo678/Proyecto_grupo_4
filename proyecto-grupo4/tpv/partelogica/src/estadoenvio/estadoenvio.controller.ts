@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
-import { EstadoEnvioService } from './estado-envio.service';
-import { EstadoEnvio } from './estado-envio';
+import { EstadoEnvioService } from './estadoenvio.service';
+import { EstadoEnvio } from './estadoenvio';
 
 @Controller('api/v1/estado-envio')
 export class EstadoEnvioController {
