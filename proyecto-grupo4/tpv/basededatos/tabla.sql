@@ -1,3 +1,36 @@
+CREATE TABLE cliente ( 
+    id SERIAL PRIMARY KEY, 
+    nombre VARCHAR(100) NOT NULL, 
+    apellido VARCHAR(100) NOT NULL, 
+    ci VARCHAR(20) UNIQUE, 
+    telefono VARCHAR(20), 
+    email VARCHAR(100), 
+    direccion TEXT, 
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+); 
+
+CREATE TABLE sucursal ( 
+    id SERIAL PRIMARY KEY, 
+    nombre VARCHAR(100) NOT NULL, 
+    direccion TEXT NOT NULL, 
+    ciudad VARCHAR(100), 
+    telefono VARCHAR(20) 
+); 
+
+CREATE TABLE contacto_cliente ( 
+    id SERIAL PRIMARY KEY, 
+    cliente_id INT REFERENCES cliente(id), 
+    tipo VARCHAR(50), 
+    nombre VARCHAR(100), 
+    telefono VARCHAR(20) 
+); 
+
+CREATE TABLE cliente_sucursal ( 
+    cliente_id INT REFERENCES cliente(id), 
+    sucursal_id INT REFERENCES sucursal(id), 
+    PRIMARY KEY (cliente_id, sucursal_id) 
+); 
+
 --TABLA DE LA PARTE 4 DE HERNAN 
 
 CREATE TABLE estado_envio (

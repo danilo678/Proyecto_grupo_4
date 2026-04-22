@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
 import { UsuarioModule } from './usuario/usuario.module';
+import { ClienteModule } from './cliente/cliente.module';
+import { SucursalModule } from './sucursal/sucursal.module';
 
 @Module({
   imports: [
@@ -10,13 +12,15 @@ import { UsuarioModule } from './usuario/usuario.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'hola123',
+      password: '123qwe',
       database: 'tpvdb',
       autoLoadEntities: true,
       synchronize: true
     }),
     EstadoEnvioModule,
-    UsuarioModule
+    UsuarioModule,
+    ClienteModule,
+    SucursalModule
 
   ],
   controllers: [],
