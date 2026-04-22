@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { EstadoEnvioModule } from './estado-envio/estado-envio.module';
 import { UsuarioModule } from './usuario/usuario.module';
 
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -10,7 +11,7 @@ import { UsuarioModule } from './usuario/usuario.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'hola123',
+      password: '1234',
       database: 'tpvdb',
       autoLoadEntities: true,
       synchronize: true
