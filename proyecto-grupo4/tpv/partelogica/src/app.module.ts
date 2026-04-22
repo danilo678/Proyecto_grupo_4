@@ -14,7 +14,7 @@ import { TipopaqueteModule } from './tipopaquete/tipopaquete.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'hola123',
+      password: '1234',
       database: 'tpvdb',
       autoLoadEntities: true,
       synchronize: true

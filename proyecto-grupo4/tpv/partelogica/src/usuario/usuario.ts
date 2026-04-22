@@ -13,7 +13,7 @@ export class usuario {
     password: string;
 
     @Column({ length: 50})
-    role: string;
+    rol: string;
 
     @Column({type: 'boolean', default: true})
     estado: boolean;
