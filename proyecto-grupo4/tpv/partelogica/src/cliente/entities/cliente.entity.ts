@@ -10,6 +10,7 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 import { Sucursal } from '../../sucursal/entities/sucursal.entity';
 import { Contacto } from './contacto/contacto.entity';
+import { Encomienda } from '../../encomienda/entities/encomienda.entity';
 
 @Entity('cliente')
 export class Cliente {
@@ -48,16 +49,14 @@ export class Cliente {
   @Column({ type: 'text', nullable: true })
   direccion!: string;
 
-  @ApiProperty({ description: 'Fecha de registro del cliente' })
+  @ApiProperty({ description: 'Fecha de registro del cliente', example: '2023-01-01T10:00:00Z' })
   @CreateDateColumn({ type: 'timestamp', default: () => 'NOW()' })
   fecha_registro!: Date;
 
   @ApiProperty({
     description: 'Sucursales asociadas al cliente',
     type: () => [Sucursal],
-    example: [
-      { id: 1, nombre: 'Sucursal Central' }
-    ] 
+    required: false
   })
   @ManyToMany(() => Sucursal, (sucursal) => sucursal.clientes)
   @JoinTable({
@@ -71,10 +70,14 @@ export class Cliente {
     description: 'Lista de contactos',
     type: () => [Contacto],
     isArray: true,
-    example: [
-      { id: 1, nombre: 'Ana Perez', tipo: 'Emergencia'}
-    ]
+    required: false
   })
   @OneToMany(() => Contacto, (contacto) => contacto.cliente)
   contactos: Contacto[];
+
+  @OneToMany(() => Encomienda, (encomienda) => encomienda.remitente)
+  encomiendasEnviadas!: Encomienda[];
+
+  @OneToMany(() => Encomienda, (encomienda) => encomienda.destinatario)
+  encomiendasRecibidas!: Encomienda[];
 }
