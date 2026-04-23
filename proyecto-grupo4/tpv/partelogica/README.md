@@ -7,8 +7,8 @@
 ## 👥 Información del Grupo
 **Grupo:** 4  
 **Estudiantes:**
-*   Percy Laime
-*   Danilo
+*   Percy Hernán Laime
+*   Danilo Aramayo Garisto
 *   Sandra Carlos Garcia
 *   Baltasar Junior Colque Huarachi
 
@@ -35,7 +35,7 @@ El proyecto ha sido construido siguiendo una arquitectura modular en **NestJS**,
 *   **Lenguaje:** TypeScript
 *   **Base de Datos:** PostgreSQL
 *   **ORM:** TypeORM
-*   **Documentación:** Swagger / OpenAPI 3.0
+*   **Documentación:** Swagger
 *   **Validación:** Class-Validator & Class-Transformer
 *   **Pruebas:** Jest
 
@@ -46,7 +46,7 @@ El proyecto ha sido construido siguiendo una arquitectura modular en **NestJS**,
 ### 1. Requisitos Previos
 *   Node.js (v18 o superior)
 *   PostgreSQL (v14 o superior)
-*   NPM o Yarn
+*   NPM 
 
 ### 2. Instalación de Dependencias
 ```bash
@@ -56,7 +56,10 @@ npm install
 
 ### 3. Configuración de la Base de Datos
 1. Crear una base de datos en PostgreSQL llamada `sgebd`.
-2. Ejecutar los scripts SQL ubicados en la carpeta `/basededatos`:
+2. Ejecutar los scripts SQL o Bash ubicados en la carpeta `/basededatos`:
+    *   Editar el Bash cambiando tu PGPASSWORD=TU CONTRASEÑA y ejecutar:
+        el archivo ./init.sh en la terminal.
+    O hacerlo de manera manual:
     *   Primero: `tablas.sql` (Estructura de tablas y relaciones).
     *   Segundo: `datos.sql` (Datos iniciales y estados).
 3. Verificar la configuración de conexión en `partelogica/src/app.module.ts`:
@@ -83,7 +86,7 @@ npm run start:dev
 La aplicación estará disponible en: `http://localhost:3000`
 
 ### Pruebas Unitarias
-El sistema cuenta con una cobertura completa de los servicios principales (43 tests exitosos).
+El sistema cuenta con una cobertura completa de los servicios principales (61 tests exitosos).
 ```bash
 npm run test
 ```
@@ -121,4 +124,7 @@ El código sigue una arquitectura modular y escalable:
 4.  **Recomendación:** Se recomienda el uso de un gestor de procesos como **PM2** y un proxy inverso como **Nginx**.
 
 ---
-*Este proyecto fue desarrollado bajo estrictos estándares de calidad backend para el examen final de Gestión de Encomiendas.*
+<p align="center">
+  <img src="https://www.unior.edu.bo/logo-unior-white.webp" width="120" alt="Unior Logo" />
+</p>
+*UNIVERSIDAD PRIVADA DE ORURO "UNIOR - 2026"*
