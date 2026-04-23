@@ -7,7 +7,7 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
-import { Pago } from '../../pago/entities/pago.entity';
+import { Pago } from '../../entities/pago.entity';
 
 @Entity('factura')
 export class Factura {

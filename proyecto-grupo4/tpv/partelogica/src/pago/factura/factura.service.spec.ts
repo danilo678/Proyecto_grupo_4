@@ -3,7 +3,7 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { FacturaService } from './factura.service';
 import { Factura } from './entities/factura.entity';
-import { Pago } from '../pago/entities/pago.entity';
+import { Pago } from '../../pago/entities/pago.entity';
 import { NotFoundException, ConflictException } from '@nestjs/common';
 
 describe('FacturaService', () => {

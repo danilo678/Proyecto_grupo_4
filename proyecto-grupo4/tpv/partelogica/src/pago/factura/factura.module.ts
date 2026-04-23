@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { FacturaService } from './factura.service';
 import { FacturaController } from './factura.controller';
 import { Factura } from './entities/factura.entity';
-import { Pago } from '../pago/entities/pago.entity';
+import { Pago } from '../entities/pago.entity';
 
 @Module({
   imports: [

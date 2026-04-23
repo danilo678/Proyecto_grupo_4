@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { CreateFacturaDto } from './dto/create-factura.dto';
 import { UpdateFacturaDto } from './dto/create-factura.dto';
 import { Factura } from './entities/factura.entity';
-import { Pago } from '../pago/entities/pago.entity';
+import { Pago } from '../entities/pago.entity';
 
 @Injectable()
 export class FacturaService {
