@@ -125,6 +125,6 @@ El código sigue una arquitectura modular y escalable:
 
 ---
 <p align="center">
-  <img src="https://www.unior.edu.bo/logo-unior-white.webp" width="120" alt="Unior Logo" />
+  <img src="https://www.unior.edu.bo/logo-unior-white.webp" width="500" alt="Unior Logo" />
 </p>
 *UNIVERSIDAD PRIVADA DE ORURO "UNIOR - 2026"*
