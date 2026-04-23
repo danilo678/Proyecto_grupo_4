@@ -15,7 +15,7 @@
 ---
 
 ## 📝 Descripción del Proyecto
-Este sistema es una solución backend integral desarrollada para la gestión de una empresa de transporte de encomiendas. Permite la administración eficiente de clientes, sucursales, envíos, rastreo en tiempo real, procesos de pago y facturación legal.
+Este sistema es una solución backend integral desarrollada para la gestión de una empresa de transporte de encomiendas. Permite la administración eficiente de clientes, sucursales, envíos, seguimiento, procesos de pago y facturación.
 
 El proyecto ha sido construido siguiendo una arquitectura modular en **NestJS**, garantizando escalabilidad, mantenibilidad y una sólida integridad de datos mediante el uso de **TypeORM** y **PostgreSQL**.
 
